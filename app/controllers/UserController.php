@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/../core/Controller.php';
 
-class HomeController extends Controller {
+class UserController extends Controller {
     public function index() {
-        $this->view('home');
+        $this->view('user/index');
     }
 }

@@ -24,3 +24,47 @@
 |--- README.md  (project documentation )
 |___ .gitignore (specify wich files will be ignored by git push, another words I will not send to git repository)
 ```
+
+
+### Not in Exam
+- Composer
+- Git
+
+
+## Composer: [Composer - Dependency Management](https://getcomposer.org/)
+
+### To Start a new
+```shell
+composer init
+```
+
+### To install the dependencies
+```shell
+composer install
+```
+
+### To add a new dependency
+```shell
+composer require <DEPENDENCY NAME>
+```
+
+## Functions
+
+### ucfirst
+
+
+Make a string's first character uppercase
+
+```php
+<?php
+function ucfirst(string $string): string { }
+@param string $string — The input string.
+@return string — the resulting string.
+@link https://php.net/manual/en/function.ucfirst.php
+```
+
+Make a string's first character uppercase
+
+```php
+ucfirst( string $str ): string
+```
