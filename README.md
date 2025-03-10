@@ -1,5 +1,7 @@
 # PHP Basic Structure
 
+CHECK LEA PLATFORM FOR ASSIGNMENTS 
+
 ## DW3 LaSalle
 
 - Web Server Application course
@@ -67,4 +69,13 @@ Make a string's first character uppercase
 
 ```php
 ucfirst( string $str ): string
+```
+
+### extract(Array())
+```php
+$array = ['users' = > []]
+extract($array);
+
+// The extract will create variable with the keys of array
+// $users = []
 ```
