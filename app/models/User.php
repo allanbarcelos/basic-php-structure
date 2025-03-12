@@ -22,4 +22,11 @@ class User extends Model {
         $this->query($sql);
         return $this->resultSet();
     }
+
+    public function findByEmail($email){
+        $sql = "SELECT * FROM {$this->table} WHERE email = :email LIMIT 1";
+        $this->query($sql);
+        $this->bind(':email', $email);
+        return $this->single();
+    }
 }
