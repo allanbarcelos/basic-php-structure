@@ -79,3 +79,11 @@ extract($array);
 // The extract will create variable with the keys of array
 // $users = []
 ```
+
+## Authentication X Authorization
+- Authentication  give to you the possibility to access (username, password)
+- Authorization its the method to verify if you have the correct credentials to access some resource
+
+**Example**
+- User --> can see but can`t edit or make changes
+- Admin --> can see and make changes
