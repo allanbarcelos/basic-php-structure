@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/User.php';
+require_once __DIR__ . '/../core/Middleware.php';
 
 class UserController extends Controller {
 
@@ -14,6 +15,8 @@ class UserController extends Controller {
     }
 
     public function create() {
+
+        Middleware::authorize('create_user');
 
         $page = [
             'title' => 'Create User'

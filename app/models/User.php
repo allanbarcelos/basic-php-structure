@@ -29,4 +29,24 @@ class User extends Model {
         $this->bind(':email', $email);
         return $this->single();
     }
+
+    public function getRole(){
+        $sql = "SELECT r.* FROM roles r JOIN users u ON u.role_id = r.id WHERE u.id = :user_id";
+        $this->query($sql);
+        $this->bind(':user_id', $_SESSION['user_id']);
+        return $this->single();
+    }
+
+    public function hasPersmission($permissionName){
+        $sql = "SELECT p.name FROM permissions p 
+                JOIN role_permissions rp ON rp.permission_id = p.id 
+                JOIN roles r ON r.id = rp.role_id 
+                JOIN users u ON u.role_id = r.id 
+                WHERE u.id = :user_id AND p.name = :permission_name";
+
+        $this->query($sql);
+        $this->bind(':user_id', $_SESSION['user_id']);
+        $this->bind(':permission_name', $permissionName);
+        return $this->single() != false;
+    }
 }
